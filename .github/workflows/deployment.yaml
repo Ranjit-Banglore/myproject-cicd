@@ -6,7 +6,7 @@ on:
             - master
 
 jobs:
-    buid-test:
+    buid-test-deploy:
         runs-on: ubuntu-latest
 
         steps: 
@@ -24,4 +24,6 @@ jobs:
               run: |
                python manage.py test
 
-               
+            - name: Deploy
+              run : |
+               echo "deploying..."
